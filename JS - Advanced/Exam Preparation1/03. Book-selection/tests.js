@@ -45,8 +45,15 @@ describe("Tests …", function() {
         });  
     });
     describe("suitableTitles", function() {
-        it("TODO …", function() {
-
+        it("check book param …", function() {
+            let books = "asa";
+            let wantedGenre = "Thriller";
+            expect(bookSelection.suitableTitles.bind(books, wantedGenre)).to.throw("Invalid input");
+        }); 
+        it("check genre param …", function() {
+            let books = "asa";
+            let wantedGenre = 2;
+            expect(bookSelection.suitableTitles.bind(books, wantedGenre)).to.throw("Invalid input");
         }); 
     });
 });
